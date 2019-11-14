@@ -36,8 +36,8 @@ DiscardMethod         = []
 AlegIDs               = []
 LogDbg                = ""
 LogLvl                = "info"
-LogStd                = true
-LogSys                = true
+LogStd                = false
+LogSys                = false
 Config                = "./heplify-server.toml"
 ConfigHTTPAddr        = ""
 
