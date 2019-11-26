@@ -92,7 +92,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "(sum(rate(heplify_method_response{method=\"INVITE\", response=~\"4..|500\"}[10m])) / \nsum(rate(heplify_method_response{method=\"INVITE\", response=\"INVITE\"}[10m])) * 100)",
+          "expr": "(sum(rate(heplify_method_response{method=\"INVITE\", response=~\"408|480|487|500\"}[10m])) / \nsum(rate(heplify_method_response{method=\"INVITE\", response=\"INVITE\"}[10m])) * 100)",
           "legendFormat": "Fail rate",
           "refId": "A"
         }
