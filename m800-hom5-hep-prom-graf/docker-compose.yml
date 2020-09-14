@@ -107,12 +107,13 @@ services:
 
   homer-webapp:
     container_name: homer-webapp
-    image: sipcapture/homer-webapp
+    image: artifactory.devops.maaii.com/lc-docker-local/m800-homer-webapp:v5.0.0
     environment:
       - "DB_HOST=172.31.35.26"
       - "DB_USER=stevenchiu"
       - "DB_PASS=123456"
       - "USE_REMOTE_MYSQL=true"
+      - "REPORT_QUERY_LIMIT=999"
     expose:
       - 80
     volumes:
@@ -124,7 +125,7 @@ services:
     restart: unless-stopped
 
   heplify-server:
-    image: artifactory.devops.maaii.com/lc-docker-local/m800-heplify-server:latest
+    image: artifactory.devops.maaii.com/lc-docker-local/m800-heplify-server:v1.0.0
     container_name: m800-heplify-server
     volumes:
       - ./config-files/heplify-server.toml:/root/heplify-server.toml
